@@ -7,7 +7,7 @@ const amqp = require("amqplib");
 //step 5 : Bind the queue to the exchange
 //step 6 : Consume messages from the queue
 
-async function consumeMessages() {
+const consumeMessages = async () => {
   const connection = await amqp.connect("amqp://localhost");
   const channel = await connection.createChannel();
 
